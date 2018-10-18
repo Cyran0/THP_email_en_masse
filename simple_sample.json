@@ -1,0 +1,37 @@
+[
+  {
+    "department": "Yvelines",
+    "cities": [
+      {
+        "name": "Alainville",
+        "email": "legsmower@gmail.com",
+        "twitter": ""
+      },
+      {
+        "name": "Poissy",
+        "email": "legs.mower@gmail.com",
+        "twitter": ""
+      }
+    ]
+  },
+  {
+    "department": "Bouches-du-Rhône",
+    "cities": [
+      {
+        "name": "Marseille",
+        "email": "les.kebabistesdu11@gmail.com",
+        "twitter": ""
+      }
+    ]
+  },
+  {
+    "department": "Orne",
+    "cities": [
+      {
+        "name": "Préaux-du-Perche",
+        "email": "leskebabistes.du11@gmail.com",
+        "twitter": ""
+      }
+    ]
+  }
+]

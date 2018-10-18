@@ -1,0 +1,402 @@
+{
+  "1": {
+    "departement": "Ain",
+    "formatted": "ain"
+  },
+  "2": {
+    "departement": "Aisne",
+    "formatted": "aisne"
+  },
+  "3": {
+    "departement": "Allier",
+    "formatted": "allier"
+  },
+  "4": {
+    "departement": "Alpes-de-Haute-Provence",
+    "formatted": "alpes-de-haute-provence"
+  },
+  "5": {
+    "departement": "Hautes-Alpes",
+    "formatted": "hautes-alpes"
+  },
+  "6": {
+    "departement": "Alpes-Maritimes",
+    "formatted": "alpes-maritimes"
+  },
+  "7": {
+    "departement": "Ardèche",
+    "formatted": "ardeche"
+  },
+  "8": {
+    "departement": "Ardennes",
+    "formatted": "ardennes"
+  },
+  "9": {
+    "departement": "Ariège",
+    "formatted": "ariege"
+  },
+  "10": {
+    "departement": "Aube",
+    "formatted": "aube"
+  },
+  "11": {
+    "departement": "Aude",
+    "formatted": "aude"
+  },
+  "12": {
+    "departement": "Aveyron",
+    "formatted": "aveyron"
+  },
+  "13": {
+    "departement": "Bouches-du-Rhône",
+    "formatted": "bouches-du-rhone"
+  },
+  "14": {
+    "departement": "Calvados",
+    "formatted": "calvados"
+  },
+  "15": {
+    "departement": "Cantal",
+    "formatted": "cantal"
+  },
+  "16": {
+    "departement": "Charente",
+    "formatted": "charente"
+  },
+  "17": {
+    "departement": "Charente-Maritime",
+    "formatted": "charente-maritime"
+  },
+  "18": {
+    "departement": "Cher",
+    "formatted": "cher"
+  },
+  "19": {
+    "departement": "Corrèze",
+    "formatted": "correze"
+  },
+  "21": {
+    "departement": "Côte-d'Or",
+    "formatted": "cote-d-or"
+  },
+  "22": {
+    "departement": "Côtes d'Armor",
+    "formatted": "cotes-d-armor"
+  },
+  "23": {
+    "departement": "Creuse",
+    "formatted": "creuse"
+  },
+  "24": {
+    "departement": "Dordogne",
+    "formatted": "dordogne"
+  },
+  "25": {
+    "departement": "Doubs",
+    "formatted": "doubs"
+  },
+  "26": {
+    "departement": "Drème",
+    "formatted": "drome"
+  },
+  "27": {
+    "departement": "Eure",
+    "formatted": "eure"
+  },
+  "28": {
+    "departement": "Eure-et-Loir",
+    "formatted": "eure-et-loir"
+  },
+  "29": {
+    "departement": "Finistère",
+    "formatted": "finistere"
+  },
+  "30": {
+    "departement": "Gard",
+    "formatted": "gard"
+  },
+  "31": {
+    "departement": "Haute-Garonne",
+    "formatted": "haute-garonne"
+  },
+  "32": {
+    "departement": "Gers",
+    "formatted": "gers"
+  },
+  "33": {
+    "departement": "Gironde",
+    "formatted": "gironde"
+  },
+  "34": {
+    "departement": "Hérault",
+    "formatted": "herault"
+  },
+  "35": {
+    "departement": "Ille-et-Vilaine",
+    "formatted": "ille-et-vilaine"
+  },
+  "36": {
+    "departement": "Indre",
+    "formatted": "indre"
+  },
+  "37": {
+    "departement": "Indre-et-Loire",
+    "formatted": "indre-et-loire"
+  },
+  "38": {
+    "departement": "Isère",
+    "formatted": "isere"
+  },
+  "39": {
+    "departement": "Jura",
+    "formatted": "jura"
+  },
+  "40": {
+    "departement": "Landes",
+    "formatted": "landes"
+  },
+  "41": {
+    "departement": "Loir-et-Cher",
+    "formatted": "loir-et-cher"
+  },
+  "42": {
+    "departement": "Loire",
+    "formatted": "loire"
+  },
+  "43": {
+    "departement": "Haute-Loire",
+    "formatted": "haute-loire"
+  },
+  "44": {
+    "departement": "Loire-Atlantique",
+    "formatted": "loire-atlantique"
+  },
+  "45": {
+    "departement": "Loiret",
+    "formatted": "loiret"
+  },
+  "46": {
+    "departement": "Lot",
+    "formatted": "lot"
+  },
+  "47": {
+    "departement": "Lot-et-Garonne",
+    "formatted": "lot-et-garonne"
+  },
+  "48": {
+    "departement": "Lozère",
+    "formatted": "lozere"
+  },
+  "49": {
+    "departement": "Maine-et-Loire",
+    "formatted": "maine-et-loire"
+  },
+  "50": {
+    "departement": "Manche",
+    "formatted": "manche"
+  },
+  "51": {
+    "departement": "Marne",
+    "formatted": "marne"
+  },
+  "52": {
+    "departement": "Haute-Marne",
+    "formatted": "haute-marne"
+  },
+  "53": {
+    "departement": "Mayenne",
+    "formatted": "mayenne"
+  },
+  "54": {
+    "departement": "Meurthe-et-Moselle",
+    "formatted": "meurthe-et-moselle"
+  },
+  "55": {
+    "departement": "Meuse",
+    "formatted": "meuse"
+  },
+  "56": {
+    "departement": "Morbihan",
+    "formatted": "morbihan"
+  },
+  "57": {
+    "departement": "Moselle",
+    "formatted": "moselle"
+  },
+  "58": {
+    "departement": "Nièvre",
+    "formatted": "nievre"
+  },
+  "59": {
+    "departement": "Nord",
+    "formatted": "nord"
+  },
+  "60": {
+    "departement": "Oise",
+    "formatted": "oise"
+  },
+  "61": {
+    "departement": "Orne",
+    "formatted": "orne"
+  },
+  "62": {
+    "departement": "Pas-de-Calais",
+    "formatted": "pas-de-calais"
+  },
+  "63": {
+    "departement": "Puy-de-Dôme",
+    "formatted": "puy-de-dome"
+  },
+  "64": {
+    "departement": "Pyrénées-Atlantiques",
+    "formatted": "pyrenees-atlantiques"
+  },
+  "65": {
+    "departement": "Hautes-Pyrénées",
+    "formatted": "hautes-pyrenees"
+  },
+  "66": {
+    "departement": "Pyrénées-Orientales",
+    "formatted": "pyrenees-orientales"
+  },
+  "67": {
+    "departement": "Bas-Rhin",
+    "formatted": "bas-rhin"
+  },
+  "68": {
+    "departement": "Haut-Rhin",
+    "formatted": "haut-rhin"
+  },
+  "69": {
+    "departement": "Rhône",
+    "formatted": "rhone"
+  },
+  "70": {
+    "departement": "Haute-Saône",
+    "formatted": "haute-saone"
+  },
+  "71": {
+    "departement": "Saône-et-Loire",
+    "formatted": "saone-et-loire"
+  },
+  "72": {
+    "departement": "Sarthe",
+    "formatted": "sarthe"
+  },
+  "73": {
+    "departement": "Savoie",
+    "formatted": "savoie"
+  },
+  "74": {
+    "departement": "Haute-Savoie",
+    "formatted": "haute-savoie"
+  },
+  "75": {
+    "departement": "Paris",
+    "formatted": "paris"
+  },
+  "76": {
+    "departement": "Seine-Maritime",
+    "formatted": "seine-maritime"
+  },
+  "77": {
+    "departement": "Seine-et-Marne",
+    "formatted": "seine-et-marne"
+  },
+  "78": {
+    "departement": "Yvelines",
+    "formatted": "yvelines"
+  },
+  "79": {
+    "departement": "Deux-Sèvres",
+    "formatted": "deux-sevres"
+  },
+  "80": {
+    "departement": "Somme",
+    "formatted": "somme"
+  },
+  "81": {
+    "departement": "Tarn",
+    "formatted": "tarn"
+  },
+  "82": {
+    "departement": "Tarn-et-Garonne",
+    "formatted": "tarn-et-garonne"
+  },
+  "83": {
+    "departement": "Var",
+    "formatted": "var"
+  },
+  "84": {
+    "departement": "Vaucluse",
+    "formatted": "vaucluse"
+  },
+  "85": {
+    "departement": "Vendée",
+    "formatted": "vendee"
+  },
+  "86": {
+    "departement": "Vienne",
+    "formatted": "vienne"
+  },
+  "87": {
+    "departement": "Haute-Vienne",
+    "formatted": "haute-vienne"
+  },
+  "88": {
+    "departement": "Vosges",
+    "formatted": "vosges"
+  },
+  "89": {
+    "departement": "Yonne",
+    "formatted": "yonne"
+  },
+  "90": {
+    "departement": "Territoire de Belfort",
+    "formatted": "territoire-de-belfort"
+  },
+  "91": {
+    "departement": "Essonne",
+    "formatted": "essonne"
+  },
+  "92": {
+    "departement": "Hauts-de-Seine",
+    "formatted": "hauts-de-seine"
+  },
+  "93": {
+    "departement": "Seine-Saint-Denis",
+    "formatted": "seine-saint-denis"
+  },
+  "94": {
+    "departement": "Val-de-Marne",
+    "formatted": "val-de-marne"
+  },
+  "95": {
+    "departement": "Val-D'Oise",
+    "formatted": "val-d-oise"
+  },
+  "971": {
+    "departement": "Guadeloupe",
+    "formatted": "guadeloupe"
+  },
+  "972": {
+    "departement": "Martinique",
+    "formatted": "martinique"
+  },
+  "973": {
+    "departement": "Guyane",
+    "formatted": "guyane"
+  },
+  "974": {
+    "departement": "Réunion",
+    "formatted": "reunion"
+  },
+  "2A": {
+    "departement": "Corse-du-Sud",
+    "formatted": "corse-du-sud"
+  },
+  "2B": {
+    "departement": "Haute-Corse",
+    "formatted": "haute-corse"
+  }
+}
