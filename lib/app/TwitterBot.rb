@@ -104,22 +104,12 @@ end
 
 
 end
-#Test = BotTwitter.new
-#Test.perform
+Test = BotTwitter.new
+Test.perform
 
 
 
-Dotenv.load
-	client = Twitter::REST::Client.new do |config|
-	  config.consumer_key        = ENV["consumer_key"]
-	  config.consumer_secret     = ENV["consumer_secret"]
-	  config.access_token        = ENV["access_token"]
-	  config.access_token_secret = ENV["access_token_secret"]
 
-end
-
-puts client.user_search("alainville")
-#[0].screen_name
 
 
 
