@@ -20,11 +20,14 @@ class Scrapper
   end
 
   def get_townhalls_urls
+    begin
     doc = Nokogiri::HTML(open("http://annuaire-des-mairies.com/#{@department}.html"))
     get_urls = doc.css("a[class=lientxt]")
     get_urls.each{ |url| 
      @city_urls << "http://annuaire-des-mairies.com"+url['href'][1...url['href'].length] #Retrait du premier caractère du href pour obtenir l'url
-    }
+      }    
+      rescue OpenURI::HTTPError => e
+    end
   end
 
   def perform
