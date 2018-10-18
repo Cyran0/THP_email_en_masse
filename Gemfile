@@ -4,10 +4,15 @@ source "https://rubygems.org"
 ruby '2.5.1'
 gem 'rubocop', '~> 0.57.2'
 gem 'pry'
-gem 'rake', '< 11.0'
-gem 'rspec', '~> 3.4'
 gem 'nokogiri'
-gem 'csv'
-gem 'json'
-gem 'google_drive'
+gem 'json'  # —> all
+gem 'dotenv', '~> 2.5' # -> all
+gem 'google_drive' 
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'googleauth', '~> 0.6.7' # —> townhalls_mailer.rb
+gem 'fileutils', '~> 1.1' # —> townhalls_mailer.rb
+gem 'gmail', '~> 0.7.1'   # —> townhalls_mailer.rb
+gem 'twitter', '~> 6.2' # —> TwitterBot.rb
+gem 'open_uri_redirections', '~> 0.2.1’# —>townhalls_mailer.rb
+
+gem 'fileutils', '~> 1.1’# —> townhalls_mailer.rb
