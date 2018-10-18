@@ -14,7 +14,7 @@ class Index
 
 #demande du département à scrapper
 	def launch
-		puts "Salut, aujourd'hui on va faire du sale."
+		puts "Salut, aujourd'hui on va faire du sale.".bold.red.on_white
 		puts "Dans quelques instants, vous allez lancer une campagne de mailing pour promouvoir THP dans les campagnes hexagonales."
 		puts "Et puisqu'un mail ne suffit, vous allez aussi gazouiller à l'oreille des maires de France."
 	end

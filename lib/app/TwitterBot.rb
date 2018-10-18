@@ -14,6 +14,7 @@ class BotTwitter
 		@twitter_ok = 0
 	end
 
+
 	#Authentification sur le compte twitter de @yakataly1 grave au .env
 	def twitter_authentification 
 		Dotenv.load
@@ -27,6 +28,8 @@ class BotTwitter
 
 	#Ouverture du json et parsing
 	def json_parsing
+
+
 		path = "#{department}.json"
 		file = File.read(path)  #../../db/#{@departement}.json')
 		city_data = JSON.parse(file)
@@ -57,12 +60,16 @@ class BotTwitter
 		puts @cities
 	end
 
+
 	def perform
 		twitter_authentification
 		json_parsing
 		json_update
 	end
 end
+
+
+
 
 
 
