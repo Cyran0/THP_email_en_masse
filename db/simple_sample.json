@@ -1,4 +1,4 @@
-[
+
   {
     "department": "Yvelines",
     "cities": [
@@ -13,25 +13,4 @@
         "twitter": ""
       }
     ]
-  },
-  {
-    "department": "Bouches-du-Rhône",
-    "cities": [
-      {
-        "name": "Marseille",
-        "email": "les.kebabistesdu11@gmail.com",
-        "twitter": ""
-      }
-    ]
-  },
-  {
-    "department": "Orne",
-    "cities": [
-      {
-        "name": "Préaux-du-Perche",
-        "email": "leskebabistes.du11@gmail.com",
-        "twitter": ""
-      }
-    ]
-  }
-]
+ }
