@@ -1,68 +1,125 @@
-require 'rubygems'
-require 'nokogiri'
-require 'open-uri'
-require 'resolv-replace'
+# poste un tweet
+
+require 'Nokogiri'
 require 'xpath'
+require 'open-uri'
+require 'json'
+require 'twitter'
+require 'dotenv'
 
 
+class BotTwitter
 
-class Getmail
+def update()
 
-def get_the_email_of_a_townhal_from_its_webpage
-page = Nokogiri::HTML(open('http://annuaire-des-mairies.com/95/vaureal.html'))
-
-cloud_elements = page.xpath("/html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]")
-
-array = []
-cloud_elements.each do |cloud_element|
+	# ligne très importante qui appelle la gem. Sans elle, le programme ne saura pas appeler Twitter
 	
 
-	array << cloud_element.text
+	# Charge le dotenv
+	Dotenv.load
 
-	File.open("db/email.json","w") do |f|
-  	f.write(array.to_json)
-end
-	
+	# quelques lignes qui enregistrent les clés d'APIs
+	client = Twitter::REST::Client.new do |config|
+	  config.consumer_key        = ENV["consumer_key"]
+	  config.consumer_secret     = ENV["consumer_secret"]
+	  config.access_token        = ENV["access_token"]
+	  config.access_token_secret = ENV["access_token_secret"]
 
 end
+
+
+	  @array_of_screen_name = [] # array sans @
+	  array_of_hundle = [] # array avec  @
+	  array_of_city_name = []
+		file = File.read('test.json')
+		city_data = JSON.parse(file)
+
+		# ON VA CHERCHER LES NOM DES VILLE :
+	city_data.each do |department|
+	  department["cities"].each do |cities_name|
+	  	array_of_city_name << cities_name["name"]
+	  	
+	  end
+	end
+
+
+
+	#AVEC LES NOM DES VILLE ON CHERCHE LEUR TWITTER :
+	array_of_city_name.each do |city|
+ 		 if client.user_search(city)[0] != nil 
+
+ 		 	twitter_handle_0 = client.user_search(city)[0].screen_name
+ 			@array_of_screen_name << twitter_handle_0 
+	 		array_of_hundle << twitter_handle_1 = "@" + "#{twitter_handle_0}"
+
+ 		 else
+ 		 	twitter_handle_0 = ""
+ 		 	twitter_handle_1 = ""
+		 end	
+
+		
+	end	
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def go_to_follow
+
+
+	client = Twitter::REST::Client.new do |config|
+	  config.consumer_key        = ENV["consumer_key"]
+	  config.consumer_secret     = ENV["consumer_secret"]
+	  config.access_token        = ENV["access_token"]
+	  config.access_token_secret = ENV["access_token_secret"]
+
+end
+
+
+
+	@array_of_screen_name.each do |x|
+    	client.follow(x)
+    end
+
+#puts @array
+
 end 
 
-
-end
-tata = Getmail.new
-
-tata.get_the_email_of_a_townhal_from_its_webpage
-
-
-
-#get_the_email_of_a_townhal_from_its_webpage
-
-
-
-
-def get_all_the_urls_of_val_doise_townhalls
-
-page = Nokogiri::HTML(open('http://annuaire-des-mairies.com/val-d-oise.html'))
-
-
-cloud_elements = page.xpath("//p/a/@href")
-
-
-
-array =[]
-
-cloud_elements.each do |cloud_element|
-
-	
-
-
-	array << "http://annuaire-des-mairies.com#{cloud_element}" 
-	puts array
-
-end
+def perform
+	update
+	go_to_follow
 end
 
-#get_all_the_urls_of_val_doise_townhalls
+
+
+end
+#Test = BotTwitter.new
+#Test.perform
+
+
+
+Dotenv.load
+	client = Twitter::REST::Client.new do |config|
+	  config.consumer_key        = ENV["consumer_key"]
+	  config.consumer_secret     = ENV["consumer_secret"]
+	  config.access_token        = ENV["access_token"]
+	  config.access_token_secret = ENV["access_token_secret"]
+
+end
+
+puts client.user_search("alainville")
+#[0].screen_name
 
 
 
