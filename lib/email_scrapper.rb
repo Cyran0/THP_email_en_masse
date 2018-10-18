@@ -3,7 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'json'
 
-puts "Il-y-a au moins 3-4 minutes de chargement avant la création du fichier, patience :)"
+puts "Il-y-a entre 2 et 4 minutes de chargement avant la création du fichier, patience :)"
 
 class Scrapper
   attr_accessor :department, :email_array, :city_urls
@@ -19,7 +19,7 @@ class Scrapper
     return doc.css(".tr-last")[3].text.split(" ")[2]
   end
 
-  def get_townhalls_urls
+  def get_all_the_urls_of_townhalls
     begin
     doc = Nokogiri::HTML(open("http://annuaire-des-mairies.com/#{@department}.html"))
     get_urls = doc.css("a[class=lientxt]")
@@ -42,10 +42,6 @@ class Scrapper
     end
   end
 end
-
-    `rescue OpenURI::HTTPError => e`
-    `next`
-    `end`
 
 #departement_test = Scrapper.new("paris")
 #departement_test.perform
