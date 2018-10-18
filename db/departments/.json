@@ -1,0 +1,89 @@
+{
+  "department": "paris",
+  "cities": [
+    {
+      "email": "Webmaster@mairie-paris.fr",
+      "name": "Paris"
+    },
+    {
+      "email": "maire01@mairie-paris.fr",
+      "name": "Paris-1-er-arrondissement"
+    },
+    {
+      "email": "maire02@mairie-paris.fr",
+      "name": "Paris-2e-arrondissement"
+    },
+    {
+      "email": "maire03@mairie-paris.fr",
+      "name": "Paris-3e-arrondissement"
+    },
+    {
+      "email": "maire04@mairie-paris.fr",
+      "name": "Paris-4e-arrondissement"
+    },
+    {
+      "email": "maire05@mairie-paris.fr",
+      "name": "Paris-5e-arrondissement"
+    },
+    {
+      "email": "jplecoq@worldonline.fr",
+      "name": "Paris-6e-arrondissement"
+    },
+    {
+      "email": "maire07@mairie-paris.fr",
+      "name": "Paris-7e-arrondissement"
+    },
+    {
+      "email": "marie-helene.de-lesquen@mairie-paris.fr",
+      "name": "Paris-8e-arrondissement"
+    },
+    {
+      "email": "maire09@mairie-paris.fr",
+      "name": "Paris-9e-arrondissement"
+    },
+    {
+      "email": "maire10@mairie-paris.fr",
+      "name": "Paris-10e-arrondissement"
+    },
+    {
+      "email": "maire11@mairie-paris.fr",
+      "name": "Paris-11e-arrondissement"
+    },
+    {
+      "email": "maire12@mairie-paris.fr",
+      "name": "Paris-12e-arrondissement"
+    },
+    {
+      "email": "maire13@mairie-paris.fr",
+      "name": "Paris-13e-arrondissement"
+    },
+    {
+      "email": "maire14@mairie-paris.fr",
+      "name": "Paris-14e-arrondissement"
+    },
+    {
+      "email": "maire15@mairie-paris.fr",
+      "name": "Paris-15e-arrondissement"
+    },
+    {
+      "email": "maire16@mairie-paris.fr",
+      "name": "Paris-16e-arrondissement"
+    },
+    {
+      "email": "maire17@mairie-paris.fr",
+      "name": "Paris-17e-arrondissement"
+    },
+    {
+      "email": "maire18@mairie-paris.fr",
+      "name": "Paris-18e-arrondissement"
+    },
+    {
+      "email": "maire19@mairie-paris.fr",
+      "name": "Paris-19e-arrondissement"
+    },
+    {
+      "email": "maire20@mairie-paris.fr",
+      "name": "Paris-20e-arrondissement"
+    }
+  ]
+}

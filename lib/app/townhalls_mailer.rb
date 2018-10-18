@@ -8,11 +8,11 @@ require 'json'
 
 class Email
 
-  attr_accessor :cities, :mail_errors, :mail_ok
+  attr_accessor :cities, :mail_errors, :mail_ok, :gmail
 
   def initialize(department)
     # Parsing 
-    json = File.read('./../../db/departments/#{department}.json')
+    json = File.read("./db/departments/#{department}.json")
     json_parsing = JSON.parse(json)
 
     @cities = json_parsing["cities"]
@@ -24,13 +24,13 @@ class Email
 
   #Authentification dans l'API de Gmail
   def authentification
-    Dotenv.load('../../.env')
-    gmail = Gmail.connect(ENV["email"],ENV["mdp"])
+    Dotenv.load('.env')
+    @gmail = Gmail.connect(ENV["email"],ENV["mdp"])
   end
 
   # Envoi d'email
   def send_mail(email, city)
-    gmail.deliver do
+    @gmail.deliver do
       to email
       subject "Changez le monde avec The Hacking Project"
       text_part do
@@ -49,15 +49,13 @@ class Email
   def perform
     authentification
     @cities.each {|city_hash|
-      if city_hash[email] == ""
+      if city_hash["email"] == ""
         @mail_errors += 1
       else
-        send_mail(city_hash[email], city_hash[name])
+        send_mail(city_hash["email"], city_hash["name"])
         @mail_ok += 1
       end
     }
   end
 
 end
-
-go = Email.new("simple_sample2")

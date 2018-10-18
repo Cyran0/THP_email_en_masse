@@ -35,25 +35,25 @@ class MassSpam
 			scrapping.perform
 
 			#Création du json par département
-			Db_adder.new(scrapping.result)
+			Db_adder.new(scrapping.result_hash)
 
 			#Envoi des emails
 			mailing = Email.new(department)
+			mailing.perform
 
 			#Suivi Twitter et update des pseudos Twitter dans le json
-			twitter = Email.new(department)
+			twitter = TwitterBot.new(department)
+			twitter.perform
 
 			#Ajout du hash lié au département au array de rapport final
 			spam_report << {
-				"department" => spam_request.chosen_departments[i]
-				"mail_errors" => mailing.mail_errors
-				"mail_ok" => mailing.mail_ok
-				"twitter_errors" => twitter.twitter_errors
-				"twitter_ok" => mailing.twitter_ok
+				"department" => spam_request.chosen_departments[i],
+				"mail_errors" => mailing.mail_errors,
+				"mail_ok" => mailing.mail_ok,
+				"twitter_errors" => twitter.twitter_errors,
+				"twitter_ok" => twitter.twitter_ok
 			}
 		}
-		Report.new.perform(spam_report)
+		Report.new(spam_report).perform
 	end
 end
-
-MassSpam.new.perform
