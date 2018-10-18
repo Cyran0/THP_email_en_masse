@@ -1,0 +1,10 @@
+{
+  "department": "Bouches-du-Rhône",
+  "cities": [
+    {
+      "name": "Marseille",
+      "email": "les.kebabistesdu11@gmail.com",
+      "twitter": ""
+    }
+  ]
+}
