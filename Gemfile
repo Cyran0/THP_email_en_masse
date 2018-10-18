@@ -7,4 +7,7 @@ gem 'pry'
 gem 'rake', '< 11.0'
 gem 'rspec', '~> 3.4'
 gem 'nokogiri'
+gem 'csv'
+gem 'json'
+gem 'google_drive'
 gem 'dotenv-rails', groups: [:development, :test]
