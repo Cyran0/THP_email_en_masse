@@ -19,7 +19,7 @@ class Scrapper
     return doc.css(".tr-last")[3].text.split(" ")[2]
   end
 
-  def get_all_the_urls_of_townhalls
+  def get_townhalls_urls
     doc = Nokogiri::HTML(open("http://annuaire-des-mairies.com/#{@department}.html"))
     get_urls = doc.css("a[class=lientxt]")
     get_urls.each{ |url| 
@@ -39,6 +39,10 @@ class Scrapper
     end
   end
 end
+
+    `rescue OpenURI::HTTPError => e`
+    `next`
+    `end`
 
 #departement_test = Scrapper.new("paris")
 #departement_test.perform
