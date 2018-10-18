@@ -7,7 +7,6 @@ class Index
 	attr_accessor :chosen_departments, :formatted_departments, :department
 
 	def initialize
-		@default_departments = ["yvelines","gard", "morbihan"]
 		@chosen_departments = []
 		@formatted_departments = []
 	end
@@ -24,15 +23,12 @@ class Index
 		while @formatted_departments.size < 3
 			print "Choisis un département en tapant son nom ou numéro : > "
 			@department = gets.chomp
-#			if 	#si erreur à gérer
-#			end
 			<< number_to_name_conversion(department)
 		end
 	end
 
-
 	def number_to_name_conversion(number)
-		json = File.read('department_list.json')
+		json = File.read('./../../db/department_list.json')
 		list = JSON.parse(json)
 		@chosen_departments << list[number]["departement"]
 		@formatted_departments << list[number]["formatted"]
@@ -41,9 +37,8 @@ class Index
 	def perform
 		launch
 		department_choices
-		print "Parfait, nous allons promouvoir thp auprès des maires de toutes les communes des  "
-
-		return @formatted_departments
+		print "Parfait, nous allons promouvoir thp auprès des maires de toutes les communes des départements suivants :"
+		puts @chosen_departments
 	end
 end
 

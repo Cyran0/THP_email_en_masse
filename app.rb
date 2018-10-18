@@ -15,43 +15,44 @@ class MassSpam
 
 	attr_accessor :spam_report, :mail_errors, :mail_sent, :twitter_ok, :twitter_errors
 	
-	def initialize		
-		@mail_errors = []
-		@mail_sent = []
-		@twitter_errors = []
-		@twitter_ok = []
-		@spam_report = [@mail_errors, @mail_sent, @twitter_errors, @twitter_ok]
+	def initialize
+		@spam_report = []
 		perform
 	end
 
 	def perform
 		
-		#Demande des départements à spammer
-		spam_request = Index.new.perform
-		department_to_spam = spam_request.department
+		#Demande des 3 départements à spammer
+		spam_request = Index.new
+		spam_request.perform
+		department_to_spam = spam_request.formatted_departments
 
-		department_to_spam.each { |department|
-
-			path = "db/#{department}.json"
+		#Puis pour chaque département
+		department_to_spam.each_with_index { |department, i|
 
 			#Scrapping json pour chaque département
 			scrapping = Scrapper.new(department)
 			scrapping.perform
 
-			#Création du  parjson département
-			Db_adder.new(scrapping.emails_hash)
+			#Création du json par département
+			Db_adder.new(scrapping.result)
 
 			#Envoi des emails
 			mailing = Email.new(department)
-			mail_errors << mailing.count_errors
-			mail_sent << mailing.count_mails
 
-			#Suivi Twitter et update des pseudos Twitter
+			#Suivi Twitter et update des pseudos Twitter dans le json
 			twitter = Email.new(department)
-			twitter_errors << twitter.twitter_errors
-			twitter_ok << mailing.twitter_ok
+
+			#Ajout du hash lié au département au array de rapport final
+			spam_report << {
+				"department" => spam_request.chosen_departments[i]
+				"mail_errors" => mailing.mail_errors
+				"mail_ok" => mailing.mail_ok
+				"twitter_errors" => twitter.twitter_errors
+				"twitter_ok" => mailing.twitter_ok
+			}
 		}
-		Report.new.perform(department_to_spam, spam_report)
+		Report.new.perform(spam_report)
 	end
 end
 
