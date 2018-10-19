@@ -17,7 +17,6 @@ class TwitterBot
     #Authentification sur le compte twitter de @yakataly1 grave au .env
     def twitter_authentification
         Dotenv.load
-        puts ENV["consumer_key"]
         @client = Twitter::REST::Client.new do |config|
             config.consumer_key        = ENV["consumer_key"]
             config.consumer_secret     = ENV["consumer_secret"]
@@ -43,7 +42,6 @@ class TwitterBot
 
     #Détection des pseudos Twitter des villes et modification du json
     def json_update
-        puts @cities
         @cities.each do |city_hash|
             #Résultat de la recherche des users Twitter contenant le nom de la ville
             search_result = @client.user_search(city_hash["name"])[0]

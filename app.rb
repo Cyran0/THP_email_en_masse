@@ -57,3 +57,5 @@ class MassSpam
 		Report.new(spam_report).perform
 	end
 end
+
+MassSpam.new

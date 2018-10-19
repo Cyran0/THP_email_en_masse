@@ -11,7 +11,7 @@ class Index
 		@formatted_departments = []
 	end
 
-#demande du département à scrapper
+#Demande du département à scrapper
 	def launch
 		puts "Salut, aujourd'hui on va faire du sale.".bold.red.on_white
 		puts "Dans quelques instants, vous allez lancer une campagne de mailing pour promouvoir THP dans les campagnes hexagonales."
@@ -20,13 +20,14 @@ class Index
 
 	def department_choices
 		puts "Pour commencer, tu vas choisir les trois départements qui seront la cible de la promo THP."
-		while @formatted_departments.size < 1
+		while @formatted_departments.size < 3
 			print "Choisis un département en tapant son nom ou numéro : > "
 			number = gets.chomp
 			number_to_name_conversion(number)
 		end
 	end
 
+#Parsing de la base des départements pour aller chercher le nom stylisé et formatté dans un json
 	def number_to_name_conversion(number)
 		json = File.read('./db/department_list.json')
 		list = JSON.parse(json)
